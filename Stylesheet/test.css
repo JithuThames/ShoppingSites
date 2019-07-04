@@ -1,0 +1,217 @@
+body
+{
+	margin: 10;
+	padding: 0;
+	background: #e3e7e7;
+	font-size: 16px;
+	color: #777;
+	font-family: sans-serif;
+	font-weight: 400;
+}
+html { 
+  background: url(shopping_time.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+#login-box 	
+{
+	position: absolute;
+	left: 40%;
+	top: 10%;
+	margin: 5% auto;
+	height: 400px;
+	width: 800px;
+	background: #fff;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+#signin-box 	
+{
+	position: absolute;
+	left: 75%;
+	margin-left: 20px;
+	background-size: cover;
+	margin: 5% auto;
+	height: 700px;
+	width: 400px;
+	background: #fff;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+	background-image: url(beach-shop-overview.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	
+}
+.signin
+{
+	text-align: center;
+	
+}
+.box-left
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+	padding: 40px;
+	width: 400px;
+	height: 400px;
+}
+.box-right
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	box-sizing: border-box;
+	padding: 40px;
+	width: 400px;
+	height: 400px;
+	background-image: url(beach-shop-overview.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;	
+}
+h1
+{
+	margin: 0, 0, 20px, 0:
+	font-weight: 300:
+	font-size: 28px;
+}
+input[type="text"],
+input[type=	"password"]
+{
+	display: block;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+	padding: 4px;
+	width: 220px;
+	height: 22px;
+	border: none;
+	outline: none;
+	border-bottom: 2px solid #aaa;
+	font-family: sans-serif;
+	font-weight: 400;
+	font-size: 15px;
+	transition: 0.2s ease;
+}
+input[type="button"]
+{
+	margin-bottom: 28px;
+	width: 120px;
+	height: 30px;
+	background: #f44336;
+	border: none;
+	color: #fff;
+	font-family: sans-serif;
+	font-weight: 500;
+	text-transform: uppercase;
+	transition: 0.2s ease;
+	cursor: pointer;
+}
+input[type="button"]:hover,
+input[type="button"]:focus
+{
+	background: #ff5557;
+	transition: 0.2s ease;
+}
+.or
+{
+	position: absolute;
+	top: 180px;
+	left: 380px;
+	width: 40px;
+	height: 40px;
+	background: #efefef;
+	border-radius: 50%;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+	text-align: center;
+	line-height: 40px;
+	
+}
+.orr
+{
+	position: absolute;
+	top: 220px;
+	left: 50%;
+	width: 40px;
+	height: 40px;
+	background: #efefef;
+	border-radius: 50%;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+	text-align: center;
+	line-height: 40px;
+	
+}
+.signinwith
+{
+	display: block;
+	font-size: 28px;
+	color: #5555FF;
+	text-align: center;
+	font-weight: 900;
+	margin-bottom: 40px;
+	
+}
+button
+{
+	margin-bottom: 20px;
+	width: 320px;
+	height: 40px;
+	border: none;
+	color: #fff;
+	border-radius: 2px;
+	font-family: sans-serif;
+	font-weight: 700;
+	transition: 0.2s ease;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+
+.facebook
+{
+	background: #32508e;
+}
+.google
+{
+	background: #dd4b39;
+}
+.twitter
+{
+	background: #55acee;
+}
+.facebook:hover,
+.facebook:focus
+{
+	
+	background: #5544FF;
+	transition: 0.2s ease;
+}
+.google:hover,
+.google:focus
+{
+	
+	background: #ff5575;
+	transition: 0.2s ease;
+}
+.twitter:hover,
+.twitter:focus
+{
+	
+	background: #57bcff;
+	transition: 0.2s ease;
+}
+
+
+.box-social
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	box-sizing: border-box;
+	padding: 40px;
+	top: 35%;
+	width: 400px;
+	height: 400px;
+		
+}
