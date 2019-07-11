@@ -1,0 +1,66 @@
+body
+{
+	margin: 5;
+	padding: 0;
+	background: #e3e7e7;
+	font-size: 16px;
+	color: #777;
+	font-family: sans-serif;
+	font-weight: 400;
+	
+}
+html { 
+  background: url(shopping_time.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+#UpdateDetails
+{
+	position: absolute;
+	left: 40%;
+	margin: 2% auto;
+	height: 541.5px ;
+	width: 410px;
+	background: #fff;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+.UpdateDetails
+{
+	position: absolute;
+	background-size: cover;
+	width: 320px ;
+	padding: 45px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+input[type="text"],
+input[type=	"password"]
+{
+	display: block;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+	padding: 4px;
+	width: 320px;
+	height: 18px;
+	border: none;
+	outline: none;
+	border-bottom: 2px solid #aaa;
+	font-family: sans-serif;
+	font-weight: 400;
+	font-size: 13px;
+	transition: 0.2s ease;
+}
+input[type="button"]
+{
+	margin-bottom: 28px;
+	width: 120px;
+	height: 30px;	
+	background: #f44336;
+	border: none;
+	color: #fff;
+	font-family: sans-serif;
+	font-weight: 500;
+	text-transform: uppercase;
+	transition: 0.2s ease;
+	cursor: pointer;
+}
