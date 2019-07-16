@@ -5,6 +5,12 @@
 <link rel="stylesheet" type="text/css" href="stylesheet\test.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+let test=()=>{
+  let el=document.getElementById("alertIncorrect");
+  el.innerHTML=" Your Username or Password is incorrect";
+  }
+</script>
 </head>
 <body>
 <div id="signin-box">
@@ -13,7 +19,7 @@
 	    <h1> Sign in </h1>
 	    <input type="text" name="username" placeholder="User Name"/>
 	    <input type="password" name="password" placeholder="Password"/>
-	    <input type="button" name="Signin" value="Sign In"/>
+	    <input type="button" name="Signin" onClick="test()"  value="Sign In"/>
 		</form>
 	   </div>
 	   <div class="orr"> OR </div> 
@@ -27,7 +33,7 @@
 		</div>
 		<div class="Incorrect">
 	   <form>  
-	   <h5> Your Username or Password is incorrect</h5>
+	   <h5 id="alertIncorrect">&nbsp</h5>
 	   </form>
 	   </div>
 </div>
