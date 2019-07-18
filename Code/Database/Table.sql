@@ -67,3 +67,4 @@ CREATE TABLE Cart_Contents
   FOREIGN KEY (Cart_Id) REFERENCES Cart_Details(Cart_Id),
   UNIQUE ()
 );
+COMMIT;
