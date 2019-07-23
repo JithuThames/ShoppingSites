@@ -1,6 +1,6 @@
 CREATE TABLE Customer
 (
-  Cust_Id INT NOT NULL,
+  Cust_Id INT NOT NULL AUTO_INCREMENT,
   Cust_Name VARCHAR(35) NOT NULL,
   Cust_Email VARCHAR(35) NOT NULL,
   Cust_role INT NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE Customer
 
 CREATE TABLE Product
 (
-  Prod_Id INT NOT NULL,
+  Prod_Id INT NOT NULL AUTO_INCREMENT,
   Prod_Name VARCHAR(35) NOT NULL,
   Prod_price INT NOT NULL,
   Prod_spec VARCHAR(50) NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE Product
 
 CREATE TABLE Offering
 (
-  Offering_Id INT NOT NULL,
+  Offering_Id INT NOT NULL AUTO_INCREMENT,
   Vendor_Id INT NOT NULL,
   Qty_stock INT NOT NULL,
   Prod_Id INT NOT NULL,
@@ -33,7 +33,7 @@ CREATE TABLE Offering
 
 CREATE TABLE Cart_Details
 (
-  Cart_Id INT NOT NULL,
+  Cart_Id INT NOT NULL AUTO_INCREMENT,
   Cart INT NOT NULL,
   Order_date INT NOT NULL,
   Del_date INT NOT NULL,
@@ -61,10 +61,8 @@ CREATE TABLE Cart_Contents
   Qty INT NOT NULL,
   Comment VARCHAR(75) NOT NULL,
   Offering_Id INT NOT NULL,
-  Offering_Id INT NOT NULL,
   Cart_Id INT NOT NULL,
   FOREIGN KEY (Offering_Id) REFERENCES Offering(Offering_Id),
-  FOREIGN KEY (Cart_Id) REFERENCES Cart_Details(Cart_Id),
-  UNIQUE ()
+  FOREIGN KEY (Cart_Id) REFERENCES Cart_Details(Cart_Id)
 );
 COMMIT;
