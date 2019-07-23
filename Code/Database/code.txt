@@ -1,0 +1,5 @@
+mysql -u web -p;
+
+
+sudo mysql;
+CREATE URSE 'web'@'localhost' IDENTIFIED BY 'webPass';
