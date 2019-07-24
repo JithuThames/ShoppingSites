@@ -1,6 +1,5 @@
 body
 {
-	margin: 10;
 	padding: 0;
 	background: #e3e7e7;
 	font-size: 14px;
@@ -11,9 +10,58 @@ body
 }
 #Top_Page
 {
-	position: absolute;
+	position: relative;
 	width: 100%;
-	height:60px;
-	float: right;
-	
+}
+/* for header decoration */
+#main-header a
+{
+	text-decoration: none;
+	margin-left: 20px;
+	font-size: 18px;
+	font-weight: 650;
+	color:blue;
+	--> border-left: 4px solid black;
+		
+}
+#main-header a:hover
+{
+	font-size: 24px;
+	transition: all .5s ease;
+}
+#main-header
+{
+	width: 100%;
+	height: 50px;
+}
+/* for search box and button */
+.search-box
+{
+	margin-top: 12px;
+	border-radius: 10px;
+	padding-left: 15px;
+}
+.search-button
+{
+	margin-left: 3px;
+	border-radius: 5px;
+}
+/* for navigation bar */
+#navigation
+{
+	width: 100%;
+	height: 30px;
+	float: left;
+}
+nav
+{
+	margin-left: 10px auto;
+}
+nav a
+{
+	text-decoration: none;
+	margin-left: 35px;
+	color: blue;
+	font-weight: 650;
+	font-size: 16px;
 }
