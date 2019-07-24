@@ -27,7 +27,9 @@ body
 #main-header a:hover
 {
 	font-size: 24px;
+	color: green;
 	transition: all .5s ease;
+	
 }
 #main-header
 {
