@@ -2,6 +2,8 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="stylesheet\Frontpage.css">
+<link rel="stylesheet" type="text/css" href="stylesheet\jquery.bxslider.css">
+<link rel="stylesheet" type="text/css" href="stylesheet\jquery.bxslider.min.css">
 </head>
 <body>
 <div id="Top_Page" style="background-color: yellow;">
@@ -28,7 +30,12 @@
 </div>
 <!--=======home slider===-->
 <div id = "slider">
-<img src="Images/laptops1.jpg" style="width:100%;">
+<div class="bxslider">
+<div><img src="Images/laptops1.jpg" style="width:100%;"></div>
+<div><img src="Images/headphones.jpg" style="width:100%;"></div>
+<div><img src="Images/bags.jpg" style="width:100%;"></div>
+<div><img src="Images/phones.jpg" style="width:100%;"></div>
+</div>
 </div>
 <div id="filters">
 
@@ -37,5 +44,12 @@
 
 </div>
 </div>
+<script
+  src="http://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+  <script src="js/jquery.bxslider.min.js"></script>
+  <script src="js/jquery.bxslider.js"></script>
+  <script src="js/slide.js"></script>
 </body>
 </html>
