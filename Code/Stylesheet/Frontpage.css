@@ -77,5 +77,33 @@ nav a:hover
 #slider
 {
 	margin-top: 20px;
-	width:100%;
+	margin-left: 5%;
+	width:90%;
+	
+}
+#Products_Showing
+{
+	margin-top: -150px;
+}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 31%;
+  padding: 10px;
+  height: 450px;
+border: 1px solid black; 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.filters
+{
+	background-color: blue;
+	float:left;
+	width:14%;
+	height: 100%;
 }

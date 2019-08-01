@@ -1,6 +1,10 @@
 $(document).ready(function(){
 $('.bxslider').bxSlider({
-    mode: 'fade',
-    captions: true
-  });
+  auto: true,
+  stopAutoOnClick: true,
+  pager: true
 });
+});
+
+
+//autoControls: true,
