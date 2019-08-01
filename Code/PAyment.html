@@ -2,12 +2,39 @@
 <html>
 <head>
 <title> Payment</title>
-<link rel="stylesheet" type="text/css" href="Stylesheet\test.css">
+<link rel="stylesheet" type="text/css" href="stylesheet\Frontpage.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<div class="Paypal">
+<div id="Top_Page" style="background-color: yellow;">
+<div class="toppage" align="center" >
+<input class="search-box" type="text" name =text" class ="search" placeholder ="Search Here" style="width: 30%; height: 27px;">
+<input class="search-button" type ="submit" name ="submit" value =" Search" style="font-size:18px; font-weight:600;">
+</div>
+<div id ="main-header" align="right">
+<a href="#"> Shop by Category</a>
+<a href="#"> Orders</a>
+<a href="#"> My Cart</a>
+<a href="#"> Help</a>
+<input type="submit" name="user" value="Hello," style="color:white; background-color: black; font-size:16px; font-weight:600;"/>
+<a href="Signin.html">SignIn</a>
+</div>
+<!--==navigation==-->
+<div id="navigation" style="background-color: yellow;">
+<nav>
+<a href="#"> Home</a>
+<a href="#"> Used Ones</a>
+<a href="#"> New Arrivals</a>
+<a href="#"> Departments</a>
+</nav>
+</div>
+</div>
+<div class="PayTab">
+<div class="Payment">
+<p Style="font-weight:600; font-size:18px; text-align: center;">Payment Method</p>
+</div>
+<div class="Paypal" style="margin-left:27%; margin-top: 15%;">
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="K4UTAS3KMSQHG">
@@ -15,4 +42,7 @@
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 </div>
+</div>
+<script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
+<script>paypal.Buttons().render('body');</script>
 </body>
