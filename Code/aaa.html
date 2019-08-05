@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <meta name="google-signin-client_id" content="21544720701-jhirq6q4toimm00uuj2gnpb8biv60mm3.apps.googleusercontent.com">
+  <meta name="google-signin-client_id" content="375189029211-geq61mmqa9cu1dd3i4oe0btg3mu0jqbo.apps.googleusercontent.com">
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="script.js"></script>
-<script>
-  function onSignIn(googleUser)
-  {
-    let profile = googleUser.getBasicProfile();
-    alert('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    alert('Name: ' + profile.getName());
-    alert('Image URL: ' + profile.getImageUrl());
-    alert('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-  }
-  </script>
-  <script>
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
-</script>
+
+ 
+<style>
+.g-signin2{
+margin-left:500px;
+margin-top:200px;
+}
+.data{
+display:none;
+}
+</style>
   </head>
 <body>
   <div class="g-signin2" data-onsuccess="onSignIn"></div>
-<a href="#" onclick="signOut();">Sign out</a>
+  <div class="data">
+  <p>Profile Details</p>
+  <img id="pic" class="img-circle" width="100" height="100"/>
+  <p>Email Address</p>
+  <p id="email" class="alert alert-danger"></p>
+  <button onclick="signOut()" class="btn btn-danger">SignOut</button>
+  </div>
 
 </body>
 </html>
