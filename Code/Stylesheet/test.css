@@ -174,7 +174,7 @@ button
 {
 	background: #32508e;
 }
-.google
+#g-signin2
 {
 	background: #dd4b39;
 }
@@ -189,8 +189,8 @@ button
 	background: #5544FF;
 	transition: 0.2s ease;
 }
-.google:hover,
-.google:focus
+#g-signin2:hover,
+#g-signin2:focus
 {
 	
 	background: #ff5575;
@@ -222,3 +222,8 @@ button
 	color: red;
 }
 
+
+
+.data{
+display:none;
+}
