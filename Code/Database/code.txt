@@ -4,3 +4,6 @@ mysql -u web -p;
 sudo mysql;
 CREATE URSE 'web'@'localhost' IDENTIFIED BY 'webPass';
 sql amazone connect web jithu1234
+
+
+sql Sebi1   jithu123
