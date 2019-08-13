@@ -1,24 +1,10 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<title> Signup Form Sebi</title>
-<link rel="stylesheet" type="text/css" href="Stylesheet\test.css">
+<title>Facebook Login Sebi</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--Google Signin-->
- <meta name="google-signin-client_id" content="375189029211-geq61mmqa9cu1dd3i4oe0btg3mu0jqbo.apps.googleusercontent.com">
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="js/script.js"></script>
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  
-  
-  <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0"></script>
-  
-<!--Google Signin Complete-->
+</head>
+<body>
 <script>
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
@@ -93,54 +79,19 @@
         'Thanks for logging in, ' + response.name + '!';
     });
   }
-  </script>
+</script>
 
-</head>
-<body>
-<div>
-<?php
-if(isset($_POST['Signup'])){
-	echo 'User Submitted';
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
 
-}
-?>
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+
+<div id="status">
 </div>
-	<div id="login-box">
-	   <div class="box-left">
-	   <form action="test.php" method="post">
-	   <div class="container">
-	    <h1> Sign up ...</h1>
-		<input type="text" name="Cust_Name" placeholder="Your Name" required>
-	    <input type="text" name="username" placeholder="User Name" required>
-	    <input type="text" name="email" placeholder="E-mail" required>
-	    <input type="password" name="password" placeholder="Password" required>
-	    <input type="password" name="password1" placeholder="Repeat Password" required>
-	    <input type="button" name="Signup" value="Sign Up"/>
-		</div>
-		</form>
-	   </div>
-	   <div class="box-right">
-	   <form>
-		<span class="signinwith"> Sign in with </br> Social Media</span>
-		<div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
-		<div class="fb" style="width: 100px; height: 25px; background-color:blue;" hidden="hidden">
-		<fb:login-button  scope="public_profile,email" onlogin="checkLoginState();">
-		</fb:login-button> </div>
-		<!--<button class="social google"> Log in with Google </button>-->
-		<br></br>
-		<div class="g-signin2" data-onsuccess="onSignIn" data-width="250" data-height="40" data-longtitle="true"></div>
-		<button onclick="signOut()">Sign Out of Google</button>
-		
-		<!--<button class="social twitter"> Log in with Twitter </button>--->
-		
-		</form>
-	   
-	   </div>
-	   <div class="or"> OR </div> 
-	   
-	</div>
-
 
 </body>
-
 </html>

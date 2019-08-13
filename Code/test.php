@@ -98,11 +98,45 @@
 </head>
 <body>
 <div>
-<?php
-if(isset($_POST['Signup'])){
-	echo 'User Submitted';
 
+<?php
+
+if(isset($_POST['Signup'])){
+	$Cust_Name		= $_POST['Cust_Name'];
+	$Cust_User		= $_POST['Cust_User'];
+	$Cust_Email		= $_POST['Cust_Email'];
+	$Cust_Contact	= $_POST['Cust_Contact'];
+	$Password		= $_POST['Password'];
+	
+$db_server="localhost";
+$db_user ="root";
+$db_pass ="";
+$db_name ="sebi";
+$db = new mysqli($db_server, $db_user, $db_pass, $db_name);
+	
+	$sql = "INSERT INTO customer(Cust_Name, Cust_User, Cust_Email, Cust_Contact, Password) VALUES('$Cust_Name','$Cust_User','$Cust_Email','$Cust_Contact','$Password')";
+	
+	if ($db->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql. "<br>" . $db->error;
 }
+}
+
+$db->close();	
+	
+	//$query=mysqli_query($db,$sql);
+	//if($query==1){
+	//	echo 'Successfully Created an Account';
+	//}else{
+		//echo 'There are some errors while saving the data';
+	//}
+	//$stmt = $db->prepare($sql);
+	//$result=$stmt->execute([$Cust_Name,$Cust_User,$Cust_Email,$Cust_Contact,$Password]);
+	//$stmt->bind_param("sssis", $Cust_Name,$Cust_User,$Cust_Email,$Cust_Contact,$Password);
+	//$stmt->execute();
+	
+
 ?>
 </div>
 	<div id="login-box">
@@ -111,11 +145,12 @@ if(isset($_POST['Signup'])){
 	   <div class="container">
 	    <h1> Sign up ...</h1>
 		<input type="text" name="Cust_Name" placeholder="Your Name" required>
-	    <input type="text" name="username" placeholder="User Name" required>
-	    <input type="text" name="email" placeholder="E-mail" required>
-	    <input type="password" name="password" placeholder="Password" required>
-	    <input type="password" name="password1" placeholder="Repeat Password" required>
-	    <input type="button" name="Signup" value="Sign Up"/>
+	    <input type="text" name="Cust_User" placeholder="User Name" required >
+	    <input type="email" name="Cust_Email" placeholder="E-mail" required style="display: block; box-sizing: border-box; margin-bottom: 20px; padding: 4px; width: 220px; height: 22px; border: none;
+		outline: none; border-bottom: 2px solid #aaa; font-family: sans-serif; font-weight: 400; font-size: 15px; transition: 0.2s ease;">
+	    <input type="text" name="Cust_Contact" placeholder="Phone Number" required >
+	    <input type="password" name="Password" placeholder="Password" required >
+	    <input type="submit" name="Signup" value="Sign Up">
 		</div>
 		</form>
 	   </div>

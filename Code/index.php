@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>Facebook Login JavaScript Example</title>
+<title>Facebook Login Sebi</title>
 <meta charset="UTF-8">
 </head>
 <body>
