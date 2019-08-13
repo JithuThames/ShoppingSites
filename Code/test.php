@@ -113,7 +113,19 @@ $db_user ="root";
 $db_pass ="";
 $db_name ="sebi";
 $db = new mysqli($db_server, $db_user, $db_pass, $db_name);
-	
+
+$result="SELECT * FROM customer WHERE Cust_Email=? LIMIT 1";
+$stmt = $db->prepare($result);
+$stmt->bind_param('s',$Cust_Email);
+$stmt->execute();
+$res= $stmt->get_result();
+$usernum= $res->num_rows;
+
+//echo $result.'<br/>';
+if($usernum > 0){
+	echo 'User with this email already registered';
+}
+	else{
 	$sql = "INSERT INTO customer(Cust_Name, Cust_User, Cust_Email, Cust_Contact, Password) VALUES('$Cust_Name','$Cust_User','$Cust_Email','$Cust_Contact','$Password')";
 	
 	if ($db->query($sql) === TRUE) {
@@ -121,6 +133,8 @@ $db = new mysqli($db_server, $db_user, $db_pass, $db_name);
 } else {
     echo "Error: " . $sql. "<br>" . $db->error;
 }
+}
+		
 }
 
 //$db->close();	
