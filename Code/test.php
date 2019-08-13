@@ -123,7 +123,7 @@ $db = new mysqli($db_server, $db_user, $db_pass, $db_name);
 }
 }
 
-$db->close();	
+//$db->close();	
 	
 	//$query=mysqli_query($db,$sql);
 	//if($query==1){
@@ -164,7 +164,8 @@ $db->close();
 		<!--<button class="social google"> Log in with Google </button>-->
 		<br></br>
 		<div class="g-signin2" data-onsuccess="onSignIn" data-width="250" data-height="40" data-longtitle="true"></div>
-		<button onclick="signOut()">Sign Out of Google</button>
+		<a href="Signin.html" style="font-weight:700; font-size:16px; margin-top:200px; color:white;">Back to Sign In</a>
+	<!--	<button onclick="signOut()">Sign Out of Google</button> -->
 		
 		<!--<button class="social twitter"> Log in with Twitter </button>--->
 		

@@ -5,7 +5,15 @@
 <link rel="stylesheet" type="text/css" href="stylesheet\Frontpage.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+ <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 400px;  /* The width is the width of the web page */
+       }
+    </style>
 </head>
+
 <body>
 <div id="Top_Page" style="background-color: yellow;">
 <div class="toppage" align="center" >
@@ -53,4 +61,25 @@
 </div>
 <script src="https://www.paypal.com/sdk/js?client-id=sb"></script>
 <!--<script>paypal.Buttons().render('body');</script>-->
+<div id="map" style="float:right;"></div>
+ <script>
+// Initialize and add the map
+function initMap() {
+  // The location of location
+  var location = {lat: 53.349804, lng: -6.260310};
+  // The map, centered at location
+  var map = new google.maps.Map(
+      document.getElementById("map"), {zoom: 8, center: location});
+  // The marker, positioned at location
+  var marker = new google.maps.Marker({position:{ lat: 53.343664, lng: -6.2645803}, map: map});
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAg0ZNEE6c-kdQ3oXIkkNutZ22TtcoJWs&callback=initMap">
+    </script>
 </body>
